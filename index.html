@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Book Shelf App</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="nav-title">Book Shelf App</h2>
+        <div>
+        <label for="searchInput" class="label-search">Search</label>
+        <input type="text" id="searchInput" name="search" placeholder="Search By Title... "  onkeyup="searchData()"   />
+      </div>
+      </nav>
+    </header>
+    <main>
+
+
+      <section id="formInput">
+        <div class="container-form">
+        <form id="inputBook">
+            <h3 class="title-apps">Insert Book Data</h3>
+            <div class="container-input">
+              <label  class="positionLabel" for="txtAuthor">Author</label>
+                <input id="txtAuthor" type="text" required/>
+                <label class="positionLabel" for="txtYear">Year</label>
+                <input id="txtYear" type="number" required />
+                <label class="positionLabel" for="txtTitle">Title</label>
+                <input id="txtTitle" type="text" required/>
+            </div>
+            <div class="check">
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+              <input id="inputBookIsComplete" type="checkbox" onclick="functCheck()" />
+            </div>
+            <div class="container-btn-submit">
+              <button id="btnSubmit" type="submit" class="btn-submit">Input Ke <strong id="before">&nbsp; Belum Selesai Dibaca </strong></button>
+            </div>
+        </form>
+      </div>
+
+        <!-- <section class="search">
+          <div class="breaker">
+            <div class="line"></div>
+            <span class="text">~ Search ~</span>
+            <div class="line"></div>
+          </div>
+
+        </section> -->
+      </section>
+
+      <section id="incomplete-book" class="bookShelf">
+        <div class="breaker">
+          <div class="line"></div>
+          <span class="text">Belum</span>
+          <span class="text">Selesai</span>
+          <span class="text">Dibaca</span>
+          <div class="line"></div>
+        </div>
+
+        <section class="container-data" id="incompleteBookshelfList">
+          <!-- <div class="dataBook">
+          <h3>Mendaki Tangga Yang Salah</h3>
+          <h4>Author ~ Indra Tristia</h4>
+          <p>Year : 2002</p>
+          <button class="move"><img src="assets/check-mark1.svg" alt="" /></button>
+          <button class="remove"><img src="assets/trash1.svg"></img></div> -->
+            <!-- <div class="container-card">
+              <div class="action">
+              </div>
+            </div> -->
+        <!-- </div> -->
+        </section>
+      </section>
+
+      <section id="complete-book" class="bookShelf" >
+        <div class="breaker">
+          <div class="line"></div>
+          <span class="text">Selesai</span>
+          <span class="text">Dibaca</span>
+          <div class="line"></div>
+        </div>
+
+        <section class="container-data" id="completeBookshelfList">
+           <!-- <div class="dataBook">
+          <h3>Mendaki Tangga Yang Salah</h3>
+          <h4>Author ~ Indra Tristia</h4>
+          <p>Year : 2002</p>
+            <div class="container-card">
+              <div class="action">
+                  <button class="move"><img src="assets/check-mark.png" alt="" /></button>
+                  <button class="remove"><img src="assets/trash.png"></img></div>
+              </div>
+            </div>
+        </div> -->
+      </section>
+      <div id="removeToast"></div>
+      <div id="moveToast"></div>
+    </main>
+
+    <script src="main/main.js"></script>
+  </body>
+</html>
